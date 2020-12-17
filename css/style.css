@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/**** BASE ****/
+body {
+  margin: 0;
+  max-width: 767px;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Police Texte */
+@font-face {
+  font-family: "robotoregular";
+  src: url("roboto-regular-webfont.woff2") format("woff2"), url("roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+h1, h2, p {
+  font-family: "robotoregular", Arial, Helvetica, sans-serif;
+}
+
+/* Police logo et titres */
+@font-face {
+  font-family: "shrikhandregular";
+  src: url("shrikhand-regular-webfont.woff2") format("woff2"), url("shrikhand-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.titres {
+  font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
+}
+
+/**** UTILS ****/
+/* Variables */
+/**** LAYOUT ****/
+/* Header */
+#logo {
+  /* Img centrée horizontalement*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  /* Taille de l'image */
+  width: 50%;
+  height: 50%;
+}
+
+header {
+  background-color: white;
+  /* Ombre */
+  box-shadow: 4px 4px 4px #9B9E9F;
+  margin-top: 25px;
+  padding-bottom: 20px;
+}
