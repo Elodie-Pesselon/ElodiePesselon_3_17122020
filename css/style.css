@@ -10,18 +10,18 @@ body {
 /* Police Texte */
 @font-face {
   font-family: "robotoregular";
-  src: url("roboto-regular-webfont.woff2") format("woff2"), url("roboto-regular-webfont.woff") format("woff");
+  src: url("css/fonts/roboto-regular-webfont.woff") format("woff2"), url("css/fonts/roboto-regular-webfont.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
 }
-h1, h2, p {
+* {
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
 }
 
 /* Police logo et titres */
 @font-face {
   font-family: "shrikhandregular";
-  src: url("shrikhand-regular-webfont.woff2") format("woff2"), url("shrikhand-regular-webfont.woff") format("woff");
+  src: url("css/fonts/shrikhand-regular-webfont.woff") format("woff2"), url("css/fonts/shrikhand-regular-webfont.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
 }

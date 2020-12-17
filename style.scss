@@ -11,30 +11,30 @@ body
 
 @font-face {
     font-family: 'robotoregular';
-    src: url('roboto-regular-webfont.woff2') format('woff2'),
-         url('roboto-regular-webfont.woff') format('woff');
+    src: url('fonts/roboto/roboto-regular-webfont.woff') format('woff2'),
+         url('./fonts/roboto/roboto-regular-webfont.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
-h1, h2, p
+*
 {
-    font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+    font-family: 'robotoregular', Arial, Helvetica, sans-serif; 
 }
 
 /* Police logo et titres */
 
 @font-face {
     font-family: 'shrikhandregular';
-    src: url('shrikhand-regular-webfont.woff2') format('woff2'),
-         url('shrikhand-regular-webfont.woff') format('woff');
+    src: url('../ElodiePesselon_3_17122020/fonts/shrikhand/shrikhand-regular-webfont.woff') format('woff2'),
+         url('../ElodiePesselon_3_17122020/fonts/shrikhand/shrikhand-regular-webfont.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
-.titres
+*
 {
-    font-family: 'shrikhandregular', Arial, Helvetica, sans-serif;
+    font-family: 'shrikhandregular', Arial, Helvetica, sans-serif; 
 }
 
 /**** UTILS ****/ 
