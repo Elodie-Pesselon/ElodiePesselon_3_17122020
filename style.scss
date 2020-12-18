@@ -1,42 +1,3 @@
-/**** BASE ****/
-
-body
-{
-    margin: 0;
-    max-width: 767px;
-    width: 100%;
-    justify-content: center;
-}
-/* Police Texte */ 
-
-@font-face {
-    font-family: 'robotoregular';
-    src: url('fonts/roboto/roboto-regular-webfont.woff') format('woff2'),
-         url('./fonts/roboto/roboto-regular-webfont.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-*
-{
-    font-family: 'robotoregular', Arial, Helvetica, sans-serif; 
-}
-
-/* Police logo et titres */
-
-@font-face {
-    font-family: 'shrikhandregular';
-    src: url('../ElodiePesselon_3_17122020/fonts/shrikhand/shrikhand-regular-webfont.woff') format('woff2'),
-         url('../ElodiePesselon_3_17122020/fonts/shrikhand/shrikhand-regular-webfont.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-}
-*
-{
-    font-family: 'shrikhandregular', Arial, Helvetica, sans-serif; 
-}
-
 /**** UTILS ****/ 
 
 /* Variables */ 
@@ -45,6 +6,57 @@ $couleur_primaire: #9356DC;
 $couleur_secondaire: #FF79DA;
 $couleur_tertiaire: #99E2D0;
 $couleur_box_shadow: #9B9E9F;
+$couleur_background_principal : #eaeaea;
+$couleur_background_secondaire : #f6f6f6;
+
+
+/**** BASE ****/
+
+input 
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+a 
+{
+    text-decoration: none;
+}
+
+body
+{
+    margin: 0;
+    max-width: 767px;
+    width: 100%;
+    justify-content: center;
+    background-color: $couleur_background_principal;
+}
+
+/* Police Texte */ 
+
+
+*
+{
+    font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+    font-size: 2em;
+    font-weight: bold;
+}
+
+h2
+{
+    font-size: 1.3em;
+    font-weight: lighter;
+}
+
+
+/* Police logo et titres */
+
+
 
 
 /**** LAYOUT ****/
@@ -67,8 +79,65 @@ header
     background-color: white;
     /* Ombre */
     box-shadow: 4px 4px 4px $couleur_box_shadow;
-    margin-top: 25px;
+    padding-top: 25px;
     padding-bottom: 20px;
 }
 
+/* Section localisation */ 
 
+#localisation
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: -12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+
+#localisation__picto
+{
+    margin-right: 12px;
+    position: relative;
+    top: -3px;
+
+}
+
+#localisation__texte
+{
+    margin: 0px;
+}
+
+/* Section présentation */ 
+
+#presentation
+{
+    /* background */
+    background-color: $couleur_background_secondaire;
+    /* Padding*/ 
+    padding-top: 20px;
+    padding-bottom: 60px;
+    padding-right: 12px;
+    padding-left: 12px;
+    /* Alignement */
+    text-align: center;
+    
+}
+
+#presentation__h2
+{
+    margin-bottom: 50px;
+}
+
+#presentation__bouton
+{
+    background: linear-gradient($couleur_secondaire, $couleur_primaire);
+    color: white;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 17px; 
+    padding-bottom: 17px;
+    border-radius: 40px;
+}

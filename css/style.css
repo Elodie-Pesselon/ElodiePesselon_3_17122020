@@ -1,36 +1,41 @@
 @charset "UTF-8";
+/**** UTILS ****/
+/* Variables */
 /**** BASE ****/
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+a {
+  text-decoration: none;
+}
+
 body {
   margin: 0;
   max-width: 767px;
   width: 100%;
   justify-content: center;
+  background-color: #eaeaea;
 }
 
 /* Police Texte */
-@font-face {
-  font-family: "robotoregular";
-  src: url("css/fonts/roboto-regular-webfont.woff") format("woff2"), url("css/fonts/roboto-regular-webfont.woff2") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 * {
   font-family: "robotoregular", Arial, Helvetica, sans-serif;
 }
 
-/* Police logo et titres */
-@font-face {
-  font-family: "shrikhandregular";
-  src: url("css/fonts/shrikhand-regular-webfont.woff") format("woff2"), url("css/fonts/shrikhand-regular-webfont.woff2") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
-.titres {
-  font-family: "shrikhandregular", Arial, Helvetica, sans-serif;
+h1 {
+  font-size: 2em;
+  font-weight: bold;
 }
 
-/**** UTILS ****/
-/* Variables */
+h2 {
+  font-size: 1.3em;
+  font-weight: lighter;
+}
+
+/* Police logo et titres */
 /**** LAYOUT ****/
 /* Header */
 #logo {
@@ -47,6 +52,54 @@ header {
   background-color: white;
   /* Ombre */
   box-shadow: 4px 4px 4px #9B9E9F;
-  margin-top: 25px;
+  padding-top: 25px;
   padding-bottom: 20px;
+}
+
+/* Section localisation */
+#localisation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: -12px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#localisation__picto {
+  margin-right: 12px;
+  position: relative;
+  top: -3px;
+}
+
+#localisation__texte {
+  margin: 0px;
+}
+
+/* Section présentation */
+#presentation {
+  /* background */
+  background-color: #f6f6f6;
+  /* Padding*/
+  padding-top: 20px;
+  padding-bottom: 60px;
+  padding-right: 12px;
+  padding-left: 12px;
+  /* Alignement */
+  text-align: center;
+}
+
+#presentation__h2 {
+  margin-bottom: 50px;
+}
+
+#presentation__bouton {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  border-radius: 40px;
 }
