@@ -19,9 +19,14 @@ input
     appearance: none;
 }
 
-a 
+a
 {
     text-decoration: none;
+}
+
+ol
+{
+    list-style-type: none;
 }
 
 body
@@ -140,4 +145,72 @@ header
     padding-top: 17px; 
     padding-bottom: 17px;
     border-radius: 40px;
+}
+
+/* Section fonctionnement */
+
+#fonctionnement
+{
+    background-color: white;
+    padding-top: 35px;
+}
+
+#fonctionnement__texte
+{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-top: 0px;
+}
+
+#fonctionnement__bloc
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -10px;
+    top: -40px;
+}
+
+#fonctionnement__tuiles
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.fonctionnement__tuiles--tuile
+{
+    display: flex;
+    align-items: center;
+    background-color: $couleur_background_secondaire;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px $couleur_background_principal;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 60px;
+    padding-left: 60px;
+    margin-top: 20px;
+}
+
+.fonctionnement__picto
+{
+    position: relative;
+    left: -25px;
+    color: $couleur_box_shadow;
+    font-size: 1.2em;
+}
+
+li
+{
+    background-color: $couleur_primaire;
+    border-radius: 50px;
+    width: 19px;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-size: 1em;
+    margin-bottom: 65px;
+    position: relative;
+    bottom: -45px;
+    right: -16px;
 }
