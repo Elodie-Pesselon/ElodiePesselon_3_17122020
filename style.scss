@@ -8,6 +8,10 @@ $couleur_tertiaire: #99E2D0;
 $couleur_box_shadow: #9B9E9F;
 $couleur_background_principal : #eaeaea;
 $couleur_background_secondaire : #f6f6f6;
+$couleur_footer : #353535;
+
+
+
 
 
 /**** BASE ****/
@@ -19,7 +23,7 @@ input
     appearance: none;
 }
 
-a
+a 
 {
     text-decoration: none;
 }
@@ -38,35 +42,79 @@ body
     background-color: $couleur_background_principal;
 }
 
-/* Police Texte */ 
-
-
-*
+body
 {
-    font-family: 'robotoregular', Arial, Helvetica, sans-serif;
+    font-family: 'roboto', Arial, Helvetica, sans-serif;
 }
 
 h1
 {
-    font-size: 2em;
+    font-size: 1.8em;
     font-weight: bold;
+    margin: 0;
 }
 
 h2
 {
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: lighter;
+    margin: 0;
+}
+
+p
+{
+    margin: 0;
 }
 
 
-/* Police logo et titres */
+
+/**** LAYOUTS ****/ 
+
+/* Footer */ 
+
+footer
+{
+    background-color: $couleur_footer;
+    color: white;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#footer__logo, #footer__bloc
+{
+    margin: 0px 0px 10px 20px;
+}
+
+#footer__logo
+{
+    font-weight: bold;
+    font-size: 1.3em;
+    font-family: 'Shrikhand', cursive;
+}
+
+.footer__bloc-texte
+{
+    display: flex;
+    align-items: center;
+}
+
+.footer__texte, .footer__bloc-texte
+{
+    margin-bottom: 10px;
+}
+
+.footer__picto
+{
+    margin-right: 10px;
+}
 
 
 
+/**** PAGES ****/
 
-/**** LAYOUT ****/
+/*** Accueil ***/
 
-/* Header */ 
+/** HEADER **/ 
 
 #logo
 {
@@ -87,6 +135,7 @@ header
     padding-top: 25px;
     padding-bottom: 20px;
 }
+
 
 /* Section localisation */ 
 
@@ -117,18 +166,23 @@ header
 
 /* Section présentation */ 
 
-#presentation
+#presentation /* Layout du bloc présentation */
 {
     /* background */
     background-color: $couleur_background_secondaire;
     /* Padding*/ 
     padding-top: 20px;
     padding-bottom: 60px;
-    padding-right: 12px;
-    padding-left: 12px;
+    padding-right: 5px;
+    padding-left: 5px;
     /* Alignement */
     text-align: center;
     
+}
+
+#presentation__h1 /* "Réservez le menu qui vous convient"*/
+{
+    margin-bottom: 20px;
 }
 
 #presentation__h2
@@ -153,9 +207,10 @@ header
 {
     background-color: white;
     padding-top: 35px;
+    padding-bottom: 35px;
 }
 
-#fonctionnement__texte
+#fonctionnement__titre
 {
     margin-top: 20px;
     margin-left: 20px;
@@ -166,9 +221,7 @@ header
 {
     display: flex;
     align-items: center;
-    position: relative;
-    left: -10px;
-    top: -40px;
+    justify-content: center;
 }
 
 #fonctionnement__tuiles
@@ -185,12 +238,14 @@ header
     background-color: $couleur_background_secondaire;
     border-radius: 20px;
     box-shadow: 5px 5px 5px $couleur_background_principal;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-right: 70px;
+    padding-left: 70px;
     margin-top: 20px;
 }
+
+
 
 .fonctionnement__picto
 {
@@ -198,6 +253,12 @@ header
     left: -25px;
     color: $couleur_box_shadow;
     font-size: 1.2em;
+}
+
+ol
+{
+    margin: 0;
+    padding: 0;
 }
 
 li
@@ -209,8 +270,126 @@ li
     padding: 5px;
     color: white;
     font-size: 1em;
-    margin-bottom: 65px;
+    margin-bottom: 60px;
     position: relative;
-    bottom: -45px;
-    right: -16px;
+    right: -15px;
+    bottom: -40px;
+}
+
+/* Section Restaurants */ 
+
+#restaurants__titre
+{
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#restaurants__bloc
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.restaurants__tuiles
+{
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    background: white;
+    border-radius: 15px;
+}
+
+.restaurants__image
+{
+    object-fit: cover;
+    object-position: bottom;
+    height: 220px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+.restaurants__tuiles--bloc
+{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.restaurants__tuiles--texte
+{
+    flex: 1;
+}
+
+.restaurants__noms, .restaurants__localisation
+{
+    margin-left: 15px;
+}
+
+.restaurants__noms
+{
+    font-weight: bold;
+    font-size: 1.3em;
+    margin: 15px 0px 10px 15px;
+}
+
+.restaurants__localisation
+{
+    font-size: 1.2em;
+    margin: 0px 0px 15px 15px;
+    font-weight: lighter;
+}
+
+.like
+{
+    font-size: 2.2em;
+}
+
+
+/** MEDIA QUERIES **/
+
+/* Section fonctionnement */ 
+
+
+@media screen and (min-width: 321px) and (max-width: 375px)
+{
+    .fonctionnement__tuiles--tuile
+    {
+        padding-right: 40px;
+        padding-left: 65px;
+    }
+
+    li
+    {
+        width: 19px;
+        text-align: center;
+        padding: 5px;
+        color: white;
+        font-size: 1em;
+        margin-bottom: 60px;
+        position: relative;
+        right: -18px;
+        bottom: -41px;
+    }
+}
+
+@media screen and (max-width: 320px)
+{
+    .fonctionnement__tuiles--tuile
+    {
+        padding-right: 30px;
+        padding-left: 55px;
+    }
+
+    li
+    {
+        width: 19px;
+        text-align: center;
+        padding: 5px;
+        color: white;
+        font-size: 1em;
+        margin-bottom: 60px;
+        position: relative;
+        right: -16px;
+        bottom: -42px;
+    }
 }

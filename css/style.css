@@ -24,24 +24,61 @@ body {
   background-color: #eaeaea;
 }
 
-/* Police Texte */
-* {
-  font-family: "robotoregular", Arial, Helvetica, sans-serif;
+body {
+  font-family: "roboto", Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 1.8em;
   font-weight: bold;
+  margin: 0;
 }
 
 h2 {
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: lighter;
+  margin: 0;
 }
 
-/* Police logo et titres */
-/**** LAYOUT ****/
-/* Header */
+p {
+  margin: 0;
+}
+
+/**** LAYOUTS ****/
+/* Footer */
+footer {
+  background-color: #353535;
+  color: white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+#footer__logo, #footer__bloc {
+  margin: 0px 0px 10px 20px;
+}
+
+#footer__logo {
+  font-weight: bold;
+  font-size: 1.3em;
+  font-family: "Shrikhand", cursive;
+}
+
+.footer__bloc-texte {
+  display: flex;
+  align-items: center;
+}
+
+.footer__texte, .footer__bloc-texte {
+  margin-bottom: 10px;
+}
+
+.footer__picto {
+  margin-right: 10px;
+}
+
+/**** PAGES ****/
+/*** Accueil ***/
+/** HEADER **/
 #logo {
   /* Img centrée horizontalement*/
   display: block;
@@ -88,10 +125,14 @@ header {
   /* Padding*/
   padding-top: 20px;
   padding-bottom: 60px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: 5px;
+  padding-left: 5px;
   /* Alignement */
   text-align: center;
+}
+
+#presentation__h1 {
+  margin-bottom: 20px;
 }
 
 #presentation__h2 {
@@ -112,9 +153,10 @@ header {
 #fonctionnement {
   background-color: white;
   padding-top: 35px;
+  padding-bottom: 35px;
 }
 
-#fonctionnement__texte {
+#fonctionnement__titre {
   margin-top: 20px;
   margin-left: 20px;
   margin-top: 0px;
@@ -123,9 +165,7 @@ header {
 #fonctionnement__bloc {
   display: flex;
   align-items: center;
-  position: relative;
-  left: -10px;
-  top: -40px;
+  justify-content: center;
 }
 
 #fonctionnement__tuiles {
@@ -140,10 +180,10 @@ header {
   background-color: #f6f6f6;
   border-radius: 20px;
   box-shadow: 5px 5px 5px #eaeaea;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 60px;
-  padding-left: 60px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-right: 70px;
+  padding-left: 70px;
   margin-top: 20px;
 }
 
@@ -154,6 +194,11 @@ header {
   font-size: 1.2em;
 }
 
+ol {
+  margin: 0;
+  padding: 0;
+}
+
 li {
   background-color: #9356DC;
   border-radius: 50px;
@@ -162,8 +207,104 @@ li {
   padding: 5px;
   color: white;
   font-size: 1em;
-  margin-bottom: 65px;
+  margin-bottom: 60px;
   position: relative;
-  bottom: -45px;
-  right: -16px;
+  right: -15px;
+  bottom: -40px;
+}
+
+/* Section Restaurants */
+#restaurants__titre {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+#restaurants__bloc {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurants__tuiles {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  background: white;
+  border-radius: 15px;
+}
+
+.restaurants__image {
+  object-fit: cover;
+  object-position: bottom;
+  height: 220px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.restaurants__tuiles--bloc {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.restaurants__tuiles--texte {
+  flex: 1;
+}
+
+.restaurants__noms, .restaurants__localisation {
+  margin-left: 15px;
+}
+
+.restaurants__noms {
+  font-weight: bold;
+  font-size: 1.3em;
+  margin: 15px 0px 10px 15px;
+}
+
+.restaurants__localisation {
+  font-size: 1.2em;
+  margin: 0px 0px 15px 15px;
+  font-weight: lighter;
+}
+
+.like {
+  font-size: 2.2em;
+}
+
+/** MEDIA QUERIES **/
+/* Section fonctionnement */
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  .fonctionnement__tuiles--tuile {
+    padding-right: 40px;
+    padding-left: 65px;
+  }
+
+  li {
+    width: 19px;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-size: 1em;
+    margin-bottom: 60px;
+    position: relative;
+    right: -18px;
+    bottom: -41px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .fonctionnement__tuiles--tuile {
+    padding-right: 30px;
+    padding-left: 55px;
+  }
+
+  li {
+    width: 19px;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-size: 1em;
+    margin-bottom: 60px;
+    position: relative;
+    right: -16px;
+    bottom: -42px;
+  }
 }
