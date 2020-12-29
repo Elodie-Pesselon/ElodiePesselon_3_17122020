@@ -11,7 +11,16 @@ $couleur_background_secondaire : #f6f6f6;
 $couleur_footer : #353535;
 
 
+/**** COMPONENTS ****/ 
 
+.btn--layout
+{
+    background: linear-gradient($couleur_secondaire, $couleur_primaire);
+    color: white;
+    padding-top: 17px; 
+    padding-bottom: 17px;
+    border-radius: 40px;
+}
 
 
 /**** BASE ****/
@@ -26,6 +35,7 @@ input
 a 
 {
     text-decoration: none;
+    color: black;
 }
 
 ol
@@ -100,7 +110,7 @@ footer
 
 .footer__texte, .footer__bloc-texte
 {
-    margin-bottom: 10px;
+    margin-bottom: 6px;
 }
 
 .footer__picto
@@ -190,15 +200,10 @@ header
     margin-bottom: 50px;
 }
 
-#presentation__bouton
+#btn__presentation
 {
-    background: linear-gradient($couleur_secondaire, $couleur_primaire);
-    color: white;
     padding-right: 20px;
     padding-left: 20px;
-    padding-top: 17px; 
-    padding-bottom: 17px;
-    border-radius: 40px;
 }
 
 /* Section fonctionnement */
@@ -392,4 +397,108 @@ li
         right: -16px;
         bottom: -42px;
     }
+}
+
+
+/*** Menu à la française ***/
+
+/* Header */
+
+#header
+{
+    display: flex;
+    align-items: center;
+}
+
+.arrow
+{
+   font-size: 1.8em;
+   position: relative;
+   right: -25px;
+}
+
+#page-menu__bannière
+{
+    width: 100%;
+}
+
+#menu /* Layout du menu */
+{
+    padding-top: 30px;
+    background-color: $couleur_background_principal;
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    position: relative;
+    top: -60px;
+}
+
+#menu__h1 /* Nom du restaurant */
+{
+    display: flex;
+}
+
+#menu__h1--shrikhand
+{
+    margin: 0px 120px 20px 20px;
+    font-family: 'Shrikhand', cursive;
+}
+
+.likemenu
+{
+    font-size: 2em;
+}
+
+.menu__h2
+{
+   margin: 30px 0px 5px 20px;
+}
+
+hr
+{
+    width: 48px;
+    border: none;
+    border-bottom: 4px solid #99E2D0;
+    margin-right: 357px;
+    margin-top: 0px;
+}
+
+.menu__plats
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.plats__tuiles
+{
+    display: flex;
+    background-color: $couleur_background_secondaire;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 12px;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.tuiles__texte--lighter
+{
+    font-weight: lighter;
+    margin-top: 5px;
+}
+
+.tuiles__texte--size
+{
+    font-size: 1.3em;
+}
+
+#btn
+{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#btn__menu
+{
+    padding-right: 50px;
+    padding-left: 50px;
 }
