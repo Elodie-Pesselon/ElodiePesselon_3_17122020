@@ -296,6 +296,7 @@ ol
 {
     display: flex;
     flex-direction: column;
+    margin-bottom: 30px
 }
 
 .restaurants__tuiles
@@ -351,57 +352,19 @@ ol
 .like
 {
     font-size: 2.2em;
-}
-
-
-/** MEDIA QUERIES **/
-
-/* Section fonctionnement */ 
-
-
-/* @media screen and (min-width: 321px) and (max-width: 375px)
-{
-    .fonctionnement__tuiles--tuile
+    color: white;
+    filter: drop-shadow(0px 0px 1px black);
+    transition: transform 400ms;
+    &:hover
     {
-        padding-right: 40px;
-        padding-left: 65px;
-    }
-
-    li
-    {
-        width: 19px;
-        text-align: center;
-        padding: 5px;
-        color: white;
-        font-size: 1em;
-        margin-bottom: 60px;
-        position: relative;
-        right: -18px;
-        bottom: -41px;
+        
+        filter: none;
+        background: -webkit-gradient(linear, left top, left bottom, from($couleur_secondaire), to($couleur_primaire));;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 
-@media screen and (max-width: 320px)
-{
-    .fonctionnement__tuiles--tuile
-    {
-        padding-right: 30px;
-        padding-left: 55px;
-    }
-
-    li
-    {
-        width: 19px;
-        text-align: center;
-        padding: 5px;
-        color: white;
-        font-size: 1em;
-        margin-bottom: 60px;
-        position: relative;
-        right: -16px;
-        bottom: -42px;
-    }
-}*/ 
 
 
 /*** Menu à la française ***/
@@ -473,7 +436,7 @@ ol
     flex-direction: column;
 }
 
-.plats__tuiles
+.plats__tuile
 {
     display: flex;
     background-color: $couleur_background_secondaire;
@@ -488,13 +451,13 @@ ol
     }
 }
 
-.tuiles__texte--lighter
+.tuile__texte--lighter
 {
     font-weight: lighter;
     margin-top: 5px;
 }
 
-.tuiles__texte--size
+.tuile__texte--size
 {
     font-size: 1.3em;
 }
