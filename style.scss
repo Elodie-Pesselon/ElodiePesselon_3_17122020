@@ -45,7 +45,7 @@ ol
 
 body
 {
-    margin: 0;
+    margin: 0 auto;
     max-width: 767px;
     width: 100%;
     justify-content: center;
@@ -240,16 +240,32 @@ header
 {
     display: flex;
     align-items: center;
-    background-color: $couleur_background_secondaire;
+    background-color: #f6f6f6;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px $couleur_background_principal;
+    box-shadow: 5px 5px 5px #eaeaea;
     padding-top: 25px;
     padding-bottom: 25px;
-    padding-right: 70px;
-    padding-left: 70px;
+    padding-right: 30px;
+    padding-left: 30px;
     margin-top: 20px;
+    counter-increment: listing;
+    width: 70%;
 }
 
+
+.fonctionnement__tuiles--tuile::before
+{
+    background-color: #9356DC;
+    border-radius: 50px;
+    width: 19px;
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-size: 1em;
+    position: relative;
+    left: -42px;
+    content: counter(listing);
+}
 
 
 .fonctionnement__picto
@@ -266,20 +282,7 @@ ol
     padding: 0;
 }
 
-li
-{
-    background-color: $couleur_primaire;
-    border-radius: 50px;
-    width: 19px;
-    text-align: center;
-    padding: 5px;
-    color: white;
-    font-size: 1em;
-    margin-bottom: 60px;
-    position: relative;
-    right: -15px;
-    bottom: -40px;
-}
+
 
 /* Section Restaurants */ 
 
@@ -335,6 +338,7 @@ li
     font-weight: bold;
     font-size: 1.3em;
     margin: 15px 0px 10px 15px;
+    display: block;
 }
 
 .restaurants__localisation
@@ -355,7 +359,7 @@ li
 /* Section fonctionnement */ 
 
 
-@media screen and (min-width: 321px) and (max-width: 375px)
+/* @media screen and (min-width: 321px) and (max-width: 375px)
 {
     .fonctionnement__tuiles--tuile
     {
@@ -397,7 +401,7 @@ li
         right: -16px;
         bottom: -42px;
     }
-}
+}*/ 
 
 
 /*** Menu à la française ***/
@@ -451,16 +455,17 @@ li
 .menu__h2
 {
    margin: 30px 0px 5px 20px;
+   position: relative;
+   &::after {
+    width: 48px;
+    border-bottom: 4px solid #99E2D0;
+    position: absolute;
+    content: "";
+    bottom: -7px;
+    left: 3px;
+   }
 }
 
-hr
-{
-    width: 48px;
-    border: none;
-    border-bottom: 4px solid #99E2D0;
-    margin-right: 357px;
-    margin-top: 0px;
-}
 
 .menu__plats
 {
@@ -477,6 +482,10 @@ hr
     margin: 12px;
     justify-content: space-between;
     align-items: flex-end;
+    animation: 0.5s forwards apparition_plats;
+    :nth-child(1){
+        animation-delay: 0.3s;
+    }
 }
 
 .tuiles__texte--lighter
