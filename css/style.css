@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /**** UTILS ****/
 /* Variables */
+/**** ANIMATIONS ****/
 /**** COMPONENTS ****/
 .btn--layout {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -32,6 +33,7 @@ body {
   width: 100%;
   justify-content: center;
   background-color: #eaeaea;
+  cursor: pointer;
 }
 
 body {
@@ -304,13 +306,28 @@ ol {
   width: 100%;
 }
 
-#menu {
+#menu_la_palette_du_gout, #menu_la_note_enchantee, #menu_a_la_francaise, #menu_le_delice_des_sens {
   padding-top: 30px;
   background-color: #eaeaea;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   position: relative;
-  top: -60px;
+}
+
+#menu_la_palette_du_gout {
+  top: -108px;
+}
+
+#menu_la_note_enchantee {
+  top: -66px;
+}
+
+#menu_a_la_francaise {
+  top: -66px;
+}
+
+#menu_le_delice_des_sens {
+  top: -110px;
 }
 
 #menu__h1 {
@@ -359,10 +376,43 @@ ol {
   margin: 12px;
   justify-content: space-between;
   align-items: flex-end;
-  animation: 0.5s forwards apparition_plats;
+  position: relative;
+  bottom: -80px;
+  animation: apparition-plats 1.5s forwards;
+  animation: apparition-plats 1.5s forwards;
+  animation: apparition-plats 1.5s forwards;
 }
 .plats__tuile :nth-child(1) {
   animation-delay: 0.3s;
+}
+.plats__tuile:hover > .tuile__prix {
+  position: relative;
+  left: 5px;
+}
+.plats__tuile:hover > .tuile__validation i {
+  display: inline;
+  animation: validation-tuile 2000ms forwards;
+}
+.plats__tuile:hover + .validation {
+  animation: rotation 2000ms forwards;
+}
+
+.tuile__validation i {
+  display: none;
+  color: white;
+  background-color: #99E2D0;
+  color: white;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  padding: 27px 20px 28px 20px;
+  position: relative;
+  right: -26%;
+  top: -11px;
+}
+
+.tuile__prix {
+  position: relative;
+  right: -11%;
 }
 
 .tuile__texte--lighter {
@@ -372,7 +422,7 @@ ol {
 }
 
 .tuile__texte--size {
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 #btn {
@@ -384,4 +434,36 @@ ol {
 #btn__menu {
   padding-right: 50px;
   padding-left: 50px;
+}
+
+@keyframes apparition-plats {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    position: relative;
+    bottom: 0px;
+  }
+}
+@keyframes validation-tuile {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
