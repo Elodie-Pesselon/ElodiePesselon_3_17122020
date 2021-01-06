@@ -287,6 +287,7 @@ ol {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  content: "";
 }
 
 /*** Menu à la française ***/
@@ -302,32 +303,27 @@ ol {
   right: -25px;
 }
 
-#page-menu__bannière {
+#bannière_la_palette_du_gout, #bannière_la_note_enchantee, #bannière_a_la_francaise, #bannière_le_delice_des_sens {
   width: 100%;
 }
 
-#menu_la_palette_du_gout, #menu_la_note_enchantee, #menu_a_la_francaise, #menu_le_delice_des_sens {
+#bannière_la_note_enchantee {
+  height: 315px;
+  object-fit: cover;
+}
+
+#bannière_le_delice_des_sens {
+  height: 320px;
+  object-fit: cover;
+}
+
+#menu {
   padding-top: 30px;
   background-color: #eaeaea;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   position: relative;
-}
-
-#menu_la_palette_du_gout {
-  top: -108px;
-}
-
-#menu_la_note_enchantee {
   top: -66px;
-}
-
-#menu_a_la_francaise {
-  top: -66px;
-}
-
-#menu_le_delice_des_sens {
-  top: -110px;
 }
 
 #menu__h1 {
@@ -348,6 +344,13 @@ ol {
   filter: drop-shadow(0px 0px 1px black);
   margin-right: 25px;
 }
+.likemenu:hover {
+  filter: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  content: "";
+}
 
 .menu__h2 {
   margin: 30px 0px 5px 20px;
@@ -367,62 +370,82 @@ ol {
   display: flex;
   flex-direction: column;
 }
+.menu__plats :nth-child(1) {
+  animation-delay: 0.3s;
+}
+.menu__plats :nth-child(2) {
+  animation-delay: 0.6s;
+}
+.menu__plats :nth-child(3) {
+  animation-delay: 0.9s;
+}
 
 .plats__tuile {
   display: flex;
   background-color: #f6f6f6;
-  padding: 15px;
   border-radius: 15px;
   margin: 12px;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
   bottom: -80px;
-  animation: apparition-plats 1.5s forwards;
-  animation: apparition-plats 1.5s forwards;
-  animation: apparition-plats 1.5s forwards;
+  opacity: 0;
+  animation: apparition-plats 1.8s forwards;
+  overflow: hidden;
 }
-.plats__tuile :nth-child(1) {
-  animation-delay: 0.3s;
+.plats__tuile:hover .tuile__validation {
+  width: 64.69px;
 }
-.plats__tuile:hover > .tuile__prix {
-  position: relative;
-  left: 5px;
-}
-.plats__tuile:hover > .tuile__validation i {
-  display: inline;
-  animation: validation-tuile 2000ms forwards;
-}
-.plats__tuile:hover + .validation {
-  animation: rotation 2000ms forwards;
+.plats__tuile:hover .tuile__validation i {
+  transform: rotate(-360deg);
 }
 
-.tuile__validation i {
-  display: none;
-  color: white;
-  background-color: #99E2D0;
-  color: white;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  padding: 27px 20px 28px 20px;
+.tuile__texte {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 15px;
   position: relative;
-  right: -26%;
-  top: -11px;
+  flex-grow: 1;
 }
 
-.tuile__prix {
-  position: relative;
-  right: -11%;
+.tuile__texte--size {
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .tuile__texte--lighter {
   font-weight: lighter;
   margin-top: 5px;
-  font-size: 0.9em;
+  font-size: 0.8em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 26px;
 }
 
-.tuile__texte--size {
-  font-size: 1em;
+.tuile__prix {
+  position: absolute;
+  right: 8px;
+  bottom: 15px;
+}
+
+.tuile__validation {
+  display: flex;
+  justify-content: center;
+  width: 0px;
+  overflow: hidden;
+  height: 100%;
+  transition: ease-in-out 1.5s;
+  background-color: #99E2D0;
+  padding-top: 22px;
+  padding-bottom: 23px;
+}
+
+.tuile__validation i {
+  color: white;
+  transition: 1.5s;
+  font-size: 1.5em;
 }
 
 #btn {
@@ -447,23 +470,5 @@ ol {
     opacity: 1;
     position: relative;
     bottom: 0px;
-  }
-}
-@keyframes validation-tuile {
-  0% {
-    transform: scaleX(0);
-    opacity: 1;
-  }
-  100% {
-    transform: scaleX(1);
-    opacity: 1;
-  }
-}
-@keyframes rotation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }
