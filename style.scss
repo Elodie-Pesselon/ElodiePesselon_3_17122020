@@ -3,9 +3,12 @@
 /* Variables */ 
 
 $couleur_primaire: #9356DC;
+$couleur_primaire_lighten: lighten(#9356DC,2%);
 $couleur_secondaire: #FF79DA;
+$couleur_secondaire_lighten: lighten(#FF79DA,2%);
 $couleur_tertiaire: #99E2D0;
 $couleur_box_shadow: #9B9E9F;
+$couleur_box_shadow_darken: darken($couleur_box_shadow, 30%);
 $couleur_background_principal : #eaeaea;
 $couleur_background_secondaire : #f6f6f6;
 $couleur_footer : #353535;
@@ -25,6 +28,15 @@ $num_tuile: 3;
     padding-top: 17px; 
     padding-bottom: 17px;
     border-radius: 40px;
+    box-shadow: 2px 3px 3px $couleur_box_shadow;
+    transition-property: all;
+    transition-duration: 1s;
+    &:hover
+    {
+        background: linear-gradient($couleur_secondaire_lighten, $couleur_primaire_lighten);
+        box-shadow: 3px 4px 4px $couleur_box_shadow_darken;
+        
+    }
 }
 
 
@@ -117,6 +129,7 @@ footer
 .footer__texte, .footer__bloc-texte
 {
     margin-bottom: 6px;
+    color: white;
 }
 
 .footer__picto
@@ -151,6 +164,7 @@ header
     padding-top: 25px;
     padding-bottom: 20px;
 }
+
 
 
 /* Section localisation */ 
@@ -360,18 +374,17 @@ ol
     font-size: 2.2em;
     color: white;
     filter: drop-shadow(0px 0px 1px black);
-    transition: transform 400ms;
+    transition-property: background;
+    transition-duration: 20s;
     &:hover
     {
-        
-        filter: none;
-        background: -webkit-gradient(linear, left top, left bottom, from($couleur_secondaire), to($couleur_primaire));;
+        /* filter: none; */
+        background: -webkit-gradient(linear, left top, left bottom, from($couleur_secondaire), to($couleur_primaire));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         content: "";
     }
 }
-
 
 
 /*** Menu à la française ***/
