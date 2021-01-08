@@ -117,6 +117,81 @@ header {
   padding-bottom: 20px;
 }
 
+/* Animation loader */
+header, #localisation, #presentation, #fonctionnement, #restaurants, footer {
+  animation: apparition-homepage 1s both;
+  animation-delay: 3s;
+}
+
+@keyframes apparition-homepage {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#loader {
+  display: flex;
+  justify-content: center;
+}
+
+.loader {
+  width: 160px;
+  height: 160px;
+  border-width: 7px;
+  border-style: dashed solid solid dotted;
+  border-color: #9356DC #9356DC transparent #9356DC;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  top: 200px;
+  animation: loader 3s linear forwards;
+  animation-delay: 0s;
+}
+.loader:after {
+  content: "";
+  position: absolute;
+  left: 125px;
+  top: 131px;
+  border: 10px solid transparent;
+  border-right-color: #9356DC;
+  transform: rotate(-40deg);
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+.loader__texte {
+  color: #985ede;
+  font-size: 0.8em;
+  position: absolute;
+  top: 277px;
+  animation: loader__text 2s ease-in-out forwards;
+  animation-delay: 0s;
+}
+
+@keyframes loader__texte {
+  0% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /* Section localisation */
 #localisation {
   display: flex;
