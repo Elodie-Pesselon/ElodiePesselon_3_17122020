@@ -704,3 +704,67 @@ ol
         bottom: 0px;
     }
 }
+
+@media screen and (min-width: 769px) 
+{
+
+    body 
+    {
+        max-width: 3840px;
+    }
+
+    #logo
+    {
+        width: 40%;
+    }
+
+    #fonctionnement
+    {
+        padding-bottom: 60px;
+    }
+
+    #fonctionnement__titre
+    {
+        margin-left: 90px;
+        font-size: 2em;
+    }
+
+    .fonctionnement__tuiles--tuile
+    {
+        width: 40%;
+        font-size: 1.3em;
+        &::before
+        {
+            width: 24px;
+        }
+    }
+
+
+
+    #restaurants__titre 
+    {
+        font-size: 2em;
+        margin-left: 90px;
+        margin-bottom: 10px;
+        margin-top: 40px;
+    }
+
+    #restaurants__bloc 
+    {
+        flex-wrap: wrap;
+        flex-direction: initial ;
+        justify-content: center;
+    }
+
+    .restaurants__tuiles 
+    {
+        width: 530px;
+    }
+
+    .restaurants__image 
+    {
+        object-position: center;
+        height: 250px;
+    }
+
+}
