@@ -361,17 +361,16 @@ ol {
 
 .like {
   font-size: 2.2em;
-  color: white;
+  background: linear-gradient(52deg, #FF79DA 5%, #9356DC 40%, white 50%, white 100%);
+  background-size: 300%;
+  background-position: 100% 0%;
   filter: drop-shadow(0px 0px 1px black);
-  transition-property: background;
-  transition-duration: 20s;
-}
-.like:hover {
-  /* filter: none; */
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  content: "";
+  transition: all 1s ease-in-out;
+}
+.like:hover {
+  background-position: 0% 100%;
 }
 
 /*** Menu à la française ***/
@@ -424,16 +423,17 @@ ol {
 
 .likemenu {
   font-size: 1.6em;
-  color: #eaeaea;
+  background: linear-gradient(52deg, #FF79DA 5%, #9356DC 40%, white 50%, white 100%);
+  background-size: 300%;
+  background-position: 100% 0%;
   filter: drop-shadow(0px 0px 1px black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 1s ease-in-out;
   margin-right: 25px;
 }
 .likemenu:hover {
-  filter: none;
-  background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  content: "";
+  background-position: 0% 100%;
 }
 
 .menu__h2 {
@@ -462,6 +462,9 @@ ol {
 }
 .menu__plats :nth-child(3) {
   animation-delay: 0.9s;
+}
+.menu__plats :nth-child(4) {
+  animation-delay: 1.2s;
 }
 
 .plats__tuile {
