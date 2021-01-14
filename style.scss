@@ -745,8 +745,6 @@ ol
         }
     }
 
-
-
     #restaurants__titre 
     {
         font-size: 2em;
@@ -772,5 +770,48 @@ ol
         object-position: center;
         height: 250px;
     }
+
+    #bannière_la_palette_du_gout, #bannière_la_note_enchantee, #bannière_a_la_francaise, #bannière_le_delice_des_sens 
+    {
+        height: 500px;
+        object-fit: cover;
+    }
+
+    #menu__h1--shrikhand 
+    {
+        font-family: "Shrikhand", cursive;
+        font-size: 2.2em;
+    }
+    
+    .tuile__texte--size 
+    {
+        font-size: 1.2em;
+    }
+
+    .tuile__texte--lighter 
+    {
+        font-size: 1em;
+    }
+
+    .tuile__validation 
+    {
+        padding-top: 27px;
+        padding-bottom: 27px;
+    }
+
+    .menu__plats 
+    {
+        align-items: center;
+    }
+
+    .plats__tuile 
+    {
+        width: 95%;
+    }
+
+    .menu__h2 {
+        margin-left: 30px;
+    }
+    
 
 }
