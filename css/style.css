@@ -27,7 +27,7 @@
   height: 160px;
   border-width: 7px;
   border-style: dashed solid solid dotted;
-  border-color: #9356DC #9356DC transparent #9356DC;
+  border-color: #9356dc #9356dc transparent #9356dc;
   border-radius: 50%;
   display: inline-block;
   position: absolute;
@@ -41,7 +41,7 @@
   left: 125px;
   top: 131px;
   border: 10px solid transparent;
-  border-right-color: #9356DC;
+  border-right-color: #9356dc;
   transform: rotate(-40deg);
 }
 
@@ -75,7 +75,12 @@
     opacity: 1;
   }
 }
-#header__hp, #localisation, #presentation, #fonctionnement, #restaurants, footer {
+#header__hp,
+#localisation,
+#presentation,
+#fonctionnement,
+#restaurants,
+footer {
   animation: apparition-homepage 1s both;
   animation-delay: 3s;
 }
@@ -96,12 +101,12 @@
 }
 /*-----------------------------------------------COMPOSANTS---------------------------------------------------*/
 .btn--layout {
-  background: linear-gradient(#FF79DA, #9356DC);
+  background: linear-gradient(#ff79da, #9356dc);
   color: white;
   padding-top: 17px;
   padding-bottom: 17px;
   border-radius: 40px;
-  box-shadow: 2px 3px 3px #9B9E9F;
+  box-shadow: 2px 3px 3px #9b9e9f;
   transition-property: all;
   transition-duration: 1s;
 }
@@ -137,12 +142,19 @@ ol {
 }
 
 h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 2em;
+  text-align: center;
+  margin: 0;
+}
+
+h2 {
   font-size: 1.8em;
   font-weight: bold;
   margin: 0;
 }
 
-h2 {
+h3 {
   font-size: 1.2em;
   font-weight: lighter;
   margin: 0;
@@ -199,7 +211,7 @@ p {
 header {
   background-color: white;
   /* Ombre */
-  box-shadow: 4px 4px 4px #9B9E9F;
+  box-shadow: 4px 4px 4px #9b9e9f;
   padding-top: 25px;
   padding-bottom: 20px;
 }
@@ -232,10 +244,10 @@ header {
   padding-left: 5px;
   text-align: center;
 }
-#presentation > #presentation__h1 {
+#presentation > #presentation__h2 {
   margin-bottom: 20px;
 }
-#presentation > #presentation__h2 {
+#presentation > #presentation__h3 {
   margin-bottom: 50px;
 }
 #presentation > #presentation__btn {
@@ -274,7 +286,7 @@ header {
   width: 70%;
 }
 #fonctionnement > #fonctionnement__tuiles > .fonctionnement__tuiles--tuile::before {
-  background-color: #9356DC;
+  background-color: #9356dc;
   border-radius: 50px;
   width: 19px;
   text-align: center;
@@ -289,7 +301,7 @@ header {
 .fonctionnement__picto {
   position: relative;
   left: -25px;
-  color: #9B9E9F;
+  color: #9b9e9f;
   font-size: 1.2em;
 }
 
@@ -331,7 +343,8 @@ ol {
 #restaurants__bloc > .restaurants__tuiles > .restaurants__tuiles--bloc > .restaurants__tuiles--texte {
   flex: 1;
 }
-#restaurants__bloc > .restaurants__tuiles > .restaurants__tuiles--bloc > .restaurants__tuiles--texte > .restaurants__noms, #restaurants__bloc > .restaurants__tuiles > .restaurants__tuiles--bloc > .restaurants__tuiles--texte .restaurants__localisation {
+#restaurants__bloc > .restaurants__tuiles > .restaurants__tuiles--bloc > .restaurants__tuiles--texte > .restaurants__noms,
+#restaurants__bloc > .restaurants__tuiles > .restaurants__tuiles--bloc > .restaurants__tuiles--texte .restaurants__localisation {
   margin-left: 15px;
 }
 #restaurants__bloc > .restaurants__tuiles > .restaurants__tuiles--bloc > .restaurants__tuiles--texte > .restaurants__noms {
@@ -348,7 +361,7 @@ ol {
 
 .like {
   font-size: 2.2em;
-  background: linear-gradient(52deg, #FF79DA 5%, #9356DC 40%, white 50%, white 100%);
+  background: linear-gradient(52deg, #ff79da 5%, #9356dc 40%, white 50%, white 100%);
   background-size: 300%;
   background-position: 100% 0%;
   filter: drop-shadow(0px 0px 1px black);
@@ -374,7 +387,10 @@ ol {
 }
 
 /*______ BANNIERE IMAGE ______*/
-#bannière_la_palette_du_gout, #bannière_la_note_enchantee, #bannière_a_la_francaise, #bannière_le_delice_des_sens {
+#bannière_la_palette_du_gout,
+#bannière_la_note_enchantee,
+#bannière_a_la_francaise,
+#bannière_le_delice_des_sens {
   width: 100%;
   object-fit: cover;
 }
@@ -383,7 +399,9 @@ ol {
   height: 230px;
 }
 
-#bannière_la_note_enchantee, #bannière_a_la_francaise, #bannière_le_delice_des_sens {
+#bannière_la_note_enchantee,
+#bannière_a_la_francaise,
+#bannière_le_delice_des_sens {
   height: 240px;
 }
 
@@ -396,19 +414,19 @@ ol {
   position: relative;
   top: -66px;
 }
-#menu > #menu__h1 {
+#menu > #menu__h2 {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-left: 20px;
 }
-#menu > #menu__h1 > #menu__h1--shrikhand {
+#menu > #menu__h2 > #menu__h2--shrikhand {
   font-family: "Shrikhand", cursive;
   font-size: 1.6em;
 }
-#menu > #menu__h1 > .likemenu {
+#menu > #menu__h2 > .likemenu {
   font-size: 1.6em;
-  background: linear-gradient(52deg, #FF79DA 5%, #9356DC 40%, #eaeaea 50%, #eaeaea 100%);
+  background: linear-gradient(52deg, #ff79da 5%, #9356dc 40%, #eaeaea 50%, #eaeaea 100%);
   background-size: 300%;
   background-position: 100% 0%;
   filter: drop-shadow(0px 0px 1px black);
@@ -417,17 +435,17 @@ ol {
   transition: all 1s ease-in-out;
   margin-right: 25px;
 }
-#menu > #menu__h1 > .likemenu:hover {
+#menu > #menu__h2 > .likemenu:hover {
   background-position: 0% 100%;
 }
-#menu > .menu__h2 {
+#menu > .menu__h3 {
   margin: 30px 0px 5px 20px;
   position: relative;
   margin-bottom: 15px;
 }
-#menu > .menu__h2::after {
+#menu > .menu__h3::after {
   width: 48px;
-  border-bottom: 4px solid #99E2D0;
+  border-bottom: 4px solid #99e2d0;
   position: absolute;
   content: "";
   bottom: -10px;
@@ -489,7 +507,7 @@ ol {
   overflow: hidden;
   height: 100%;
   transition: ease-in-out 1.5s;
-  background-color: #99E2D0;
+  background-color: #99e2d0;
   padding-top: 23px;
   padding-bottom: 23px;
 }
@@ -533,6 +551,10 @@ ol {
     width: 40%;
   }
 
+  h1 {
+    font-size: 5.3em;
+  }
+
   /* _______ HOME PAGE ______*/
   #fonctionnement {
     padding-bottom: 60px;
@@ -541,12 +563,11 @@ ol {
     margin-left: 90px;
     font-size: 2em;
   }
-
-  .fonctionnement__tuiles--tuile {
+  #fonctionnement > #fonctionnement__tuiles > .fonctionnement__tuiles--tuile {
     width: 40%;
     font-size: 1.3em;
   }
-  .fonctionnement__tuiles--tuile::before {
+  #fonctionnement > #fonctionnement__tuiles > .fonctionnement__tuiles--tuile::before {
     width: 24px;
   }
 
@@ -571,35 +592,34 @@ ol {
   }
 
   /* ______ PAGES RESTAURANTS ______*/
-  #bannière_la_palette_du_gout, #bannière_la_note_enchantee, #bannière_a_la_francaise, #bannière_le_delice_des_sens {
+  #bannière_la_palette_du_gout,
+#bannière_la_note_enchantee,
+#bannière_a_la_francaise,
+#bannière_le_delice_des_sens {
     height: 500px;
     object-fit: cover;
   }
 
-  #menu__h1--shrikhand {
-    font-size: 2.2em;
-  }
-
-  .menu__h2 {
+  #menu > #menu__h2 {
     margin-left: 30px;
   }
-
-  .menu__plats {
+  #menu > #menu__h2 > #menu__h2--shrikhand {
+    font-size: 2.2em;
+  }
+  #menu > .menu__plats {
     align-items: center;
   }
-  .menu__plats > .plats__tuile {
+  #menu > .menu__plats > .plats__tuile {
     width: 95%;
   }
-  .menu__plats > .plats__tuile > .tuile__validation {
-    padding-top: 27px;
-    padding-bottom: 27px;
-  }
-
-  .tuile__texte--size {
+  #menu > .menu__plats > .plats__tuile > .tuile__texte > .tuile__texte--size {
     font-size: 1.2em;
   }
-
-  .tuile__texte--lighter {
+  #menu > .menu__plats > .plats__tuile > .tuile__texte > .tuile__texte--lighter {
     font-size: 1em;
+  }
+  #menu > .menu__plats > .plats__tuile > .tuile__validation {
+    padding-top: 27px;
+    padding-bottom: 27px;
   }
 }
