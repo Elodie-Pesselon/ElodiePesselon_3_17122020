@@ -19,74 +19,67 @@ $couleur_linear-gradient: linear-gradient(
 
 /*______ LOADER HOME PAGE ______*/
 
-/* Mise en page de l'animation */
+@keyframes loader__apparition {
+  0% {
+    font-size: 2.3em;
+    bottom: -100px;
+    color: $couleur_secondaire;
+  }
+  30% {
+    color: $couleur_primaire;
+  }
+  100% {
+    position: relative;
+    top: -67px;
+    font-size: 2em;
+    color: black;
+  }
+}
 
 #loader {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
   display: flex;
-  justify-content: center;
-}
-
-/* Rotation de la flêche */
-
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 0;
-  }
-}
-
-.loader {
-  width: 160px;
-  height: 160px;
-  border-width: 7px;
-  border-style: dashed solid solid dotted;
-  border-color: $couleur_primaire $couleur_primaire transparent
-    $couleur_primaire;
-  border-radius: 50%;
-  display: inline-block;
   position: absolute;
-  top: 200px;
-  animation: loader 3s linear forwards;
-  animation-delay: 0s;
-  &:after {
-    content: "";
-    position: absolute;
-    left: 125px;
-    top: 131px;
-    border: 10px solid transparent;
-    border-right-color: $couleur_primaire;
-    transform: rotate(-40deg);
-  }
+  right: 100px;
 }
 
-/* Mise en page du texte de l'animation "Un instant...ça chauffe!" */
-
-@keyframes loader__texte {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+.loader__lettre {
+  font-size: 2.3em;
+  color: $couleur_secondaire;
+  animation: loader__apparition 3s cubic-bezier(1, 0.02, 0.11, 0.87) forwards;
 }
 
-.loader__texte {
-  color: $couleur_primaire_lighten;
-  font-size: 0.8em;
-  position: absolute;
-  top: 277px;
-  animation: loader__text 2s ease-in-out forwards;
+#loader__lettre--1 {
   animation-delay: 0s;
+}
+
+#loader__lettre--2 {
+  animation-delay: 0.1s;
+}
+
+#loader__lettre--3 {
+  animation-delay: 0.2s;
+}
+
+#loader__lettre--4 {
+  animation-delay: 0.3s;
+}
+
+#loader__lettre--5 {
+  animation-delay: 0.4s;
+}
+
+#loader__lettre--6 {
+  animation-delay: 0.5s;
+}
+
+#loader__lettre--7 {
+  animation-delay: 0.6s;
+}
+
+#loader__lettre--8 {
+  animation-delay: 0.7s;
 }
 
 /* Apparition de la home page à la suite de l'animation */
@@ -107,7 +100,7 @@ $couleur_linear-gradient: linear-gradient(
 #restaurants,
 footer {
   animation: apparition-homepage 1s both;
-  animation-delay: 3s;
+  animation-delay: 3.5s;
 }
 
 /*______ APPARITION DES PLATS DANS LES PAGES RESTAURANTS  ______*/
@@ -173,8 +166,7 @@ ol {
   list-style-type: none;
 }
 
-h1
-{
+h1 {
   font-family: "Shrikhand", cursive;
   font-size: 2em;
   text-align: center;
@@ -610,10 +602,38 @@ ol {
     width: 40%;
   }
 
-  h1
-  {
+  h1 {
     font-size: 5.3em;
   }
+
+  /* ______ ADAPTATION ANIMATION HOME PAGE ______*/
+
+  @keyframes loader__apparition {
+    0% {
+      font-size: 5.6em;
+      bottom: -100px;
+      color: $couleur_secondaire;
+    }
+    30% {
+      color: $couleur_primaire;
+    }
+    100% {
+      position: relative;
+      top: -144px;
+      font-size: 5.3em;
+      color: black;
+    }
+  }
+  #loader {
+    right: 406px;
+  }
+
+  .loader__lettre {
+    font-size: 5.3em;
+    color: $couleur_secondaire;
+    animation: loader__apparition 3s cubic-bezier(1, 0.02, 0.11, 0.87) forwards;
+  }
+
   /* _______ HOME PAGE ______*/
 
   #fonctionnement {
@@ -623,7 +643,7 @@ ol {
       font-size: 2em;
     }
     & > #fonctionnement__tuiles /* Modification de la taille des tuiles fonctionnement */ {
-      & > .fonctionnement__tuiles--tuile { 
+      & > .fonctionnement__tuiles--tuile {
         width: 40%;
         font-size: 1.3em;
       }
@@ -664,9 +684,9 @@ ol {
   }
 
   #menu {
-    & > #menu__h2{
+    & > #menu__h2 {
       margin-left: 30px;
-      & > #menu__h2--shrikhand{
+      & > #menu__h2--shrikhand {
         font-size: 2.2em;
       }
     }
@@ -674,11 +694,11 @@ ol {
       align-items: center;
       & > .plats__tuile {
         width: 95%;
-        & >.tuile__texte {
-          & >.tuile__texte--size {
+        & > .tuile__texte {
+          & > .tuile__texte--size {
             font-size: 1.2em;
           }
-          & >.tuile__texte--lighter {
+          & > .tuile__texte--lighter {
             font-size: 1em;
           }
         }

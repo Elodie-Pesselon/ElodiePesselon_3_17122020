@@ -2,68 +2,66 @@
 /*-----------------------------------------------VARIABLES----------------------------------------------------*/
 /*----------------------------------------------ANIMATIONS----------------------------------------------------*/
 /*______ LOADER HOME PAGE ______*/
-/* Mise en page de l'animation */
+@keyframes loader__apparition {
+  0% {
+    font-size: 2.3em;
+    bottom: -100px;
+    color: #ff79da;
+  }
+  30% {
+    color: #9356dc;
+  }
+  100% {
+    position: relative;
+    top: -67px;
+    font-size: 2em;
+    color: black;
+  }
+}
 #loader {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
   display: flex;
-  justify-content: center;
+  position: absolute;
+  right: 100px;
 }
 
-/* Rotation de la flêche */
-@keyframes loader {
-  0% {
-    transform: rotate(0deg);
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 0;
-  }
-}
-.loader {
-  width: 160px;
-  height: 160px;
-  border-width: 7px;
-  border-style: dashed solid solid dotted;
-  border-color: #9356dc #9356dc transparent #9356dc;
-  border-radius: 50%;
-  display: inline-block;
-  position: absolute;
-  top: 200px;
-  animation: loader 3s linear forwards;
-  animation-delay: 0s;
-}
-.loader:after {
-  content: "";
-  position: absolute;
-  left: 125px;
-  top: 131px;
-  border: 10px solid transparent;
-  border-right-color: #9356dc;
-  transform: rotate(-40deg);
+.loader__lettre {
+  font-size: 2.3em;
+  color: #ff79da;
+  animation: loader__apparition 3s cubic-bezier(1, 0.02, 0.11, 0.87) forwards;
 }
 
-/* Mise en page du texte de l'animation "Un instant...ça chauffe!" */
-@keyframes loader__texte {
-  0% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-.loader__texte {
-  color: #985ede;
-  font-size: 0.8em;
-  position: absolute;
-  top: 277px;
-  animation: loader__text 2s ease-in-out forwards;
+#loader__lettre--1 {
   animation-delay: 0s;
+}
+
+#loader__lettre--2 {
+  animation-delay: 0.1s;
+}
+
+#loader__lettre--3 {
+  animation-delay: 0.2s;
+}
+
+#loader__lettre--4 {
+  animation-delay: 0.3s;
+}
+
+#loader__lettre--5 {
+  animation-delay: 0.4s;
+}
+
+#loader__lettre--6 {
+  animation-delay: 0.5s;
+}
+
+#loader__lettre--7 {
+  animation-delay: 0.6s;
+}
+
+#loader__lettre--8 {
+  animation-delay: 0.7s;
 }
 
 /* Apparition de la home page à la suite de l'animation */
@@ -82,7 +80,7 @@
 #restaurants,
 footer {
   animation: apparition-homepage 1s both;
-  animation-delay: 3s;
+  animation-delay: 3.5s;
 }
 
 /*______ APPARITION DES PLATS DANS LES PAGES RESTAURANTS  ______*/
@@ -553,6 +551,33 @@ ol {
 
   h1 {
     font-size: 5.3em;
+  }
+
+  /* ______ ADAPTATION ANIMATION HOME PAGE ______*/
+  @keyframes loader__apparition {
+    0% {
+      font-size: 5.6em;
+      bottom: -100px;
+      color: #ff79da;
+    }
+    30% {
+      color: #9356dc;
+    }
+    100% {
+      position: relative;
+      top: -144px;
+      font-size: 5.3em;
+      color: black;
+    }
+  }
+  #loader {
+    right: 406px;
+  }
+
+  .loader__lettre {
+    font-size: 5.3em;
+    color: #ff79da;
+    animation: loader__apparition 3s cubic-bezier(1, 0.02, 0.11, 0.87) forwards;
   }
 
   /* _______ HOME PAGE ______*/
