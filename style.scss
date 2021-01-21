@@ -22,7 +22,7 @@ $couleur_linear-gradient: linear-gradient(
 @keyframes loader__apparition {
   0% {
     font-size: 2.3em;
-    bottom: -100px;
+    top: 67px;
     color: $couleur_secondaire;
   }
   30% {
@@ -41,7 +41,9 @@ $couleur_linear-gradient: linear-gradient(
   margin: 0;
   display: flex;
   position: absolute;
-  right: 100px;
+  right: 0px;
+  left: 0px;
+  justify-content: center;
 }
 
 .loader__lettre {
