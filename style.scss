@@ -613,7 +613,7 @@ ol {
   @keyframes loader__apparition {
     0% {
       font-size: 5.6em;
-      bottom: -100px;
+      top: 144px;
       color: $couleur_secondaire;
     }
     30% {
@@ -626,9 +626,7 @@ ol {
       color: black;
     }
   }
-  #loader {
-    right: 406px;
-  }
+  
 
   .loader__lettre {
     font-size: 5.3em;
