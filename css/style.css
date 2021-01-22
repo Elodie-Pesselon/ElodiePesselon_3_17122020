@@ -5,7 +5,6 @@
 @keyframes loader__apparition {
   0% {
     font-size: 36.8px;
-    top: 67px;
     color: #ff79da;
   }
   30% {
@@ -13,9 +12,9 @@
   }
   100% {
     position: relative;
-    top: -67px;
     font-size: 32px;
     color: black;
+    -webkit-transform: translateY(-67px);
   }
 }
 #loader {
@@ -563,7 +562,6 @@ ol {
   @keyframes loader__apparition {
     0% {
       font-size: 89.6px;
-      top: 144px;
       color: #ff79da;
     }
     30% {
@@ -571,9 +569,9 @@ ol {
     }
     100% {
       position: relative;
-      top: -144px;
       font-size: 84.8px;
       color: black;
+      -webkit-transform: translateY(-144px);
     }
   }
   .loader__lettre {

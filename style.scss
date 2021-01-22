@@ -22,7 +22,6 @@ $couleur_linear-gradient: linear-gradient(
 @keyframes loader__apparition {
   0% {
     font-size: 36.8px;
-    top: 67px;
     color: $couleur_secondaire;
   }
   30% {
@@ -30,9 +29,9 @@ $couleur_linear-gradient: linear-gradient(
   }
   100% {
     position: relative;
-    top: -67px;
     font-size: 32px;
     color: black;
+    -webkit-transform: translateY(-67px);
   }
 }
 
@@ -617,7 +616,6 @@ ol {
   @keyframes loader__apparition {
     0% {
       font-size: 89.6px;
-      top: 144px;
       color: $couleur_secondaire;
     }
     30% {
@@ -625,9 +623,9 @@ ol {
     }
     100% {
       position: relative;
-      top: -144px;
       font-size: 84.8px;
       color: black;
+      -webkit-transform: translateY(-144px);
     }
   }
   
