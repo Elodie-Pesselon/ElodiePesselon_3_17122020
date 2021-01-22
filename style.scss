@@ -21,7 +21,7 @@ $couleur_linear-gradient: linear-gradient(
 
 @keyframes loader__apparition {
   0% {
-    font-size: 2.3em;
+    font-size: 36.8px;
     top: 67px;
     color: $couleur_secondaire;
   }
@@ -31,7 +31,7 @@ $couleur_linear-gradient: linear-gradient(
   100% {
     position: relative;
     top: -67px;
-    font-size: 2em;
+    font-size: 32px;
     color: black;
   }
 }
@@ -47,7 +47,7 @@ $couleur_linear-gradient: linear-gradient(
 }
 
 .loader__lettre {
-  font-size: 2.3em;
+  font-size: 32px;
   color: $couleur_secondaire;
   animation: loader__apparition 3s cubic-bezier(1, 0.02, 0.11, 0.87) forwards;
 }
@@ -609,14 +609,14 @@ ol {
   }
 
   h1 {
-    font-size: 5.3em;
+    font-size: 84.8px;
   }
 
   /* ______ ADAPTATION ANIMATION HOME PAGE ______*/
 
   @keyframes loader__apparition {
     0% {
-      font-size: 5.6em;
+      font-size: 89.6px;
       top: 144px;
       color: $couleur_secondaire;
     }
@@ -626,14 +626,14 @@ ol {
     100% {
       position: relative;
       top: -144px;
-      font-size: 5.3em;
+      font-size: 84.8px;
       color: black;
     }
   }
   
 
   .loader__lettre {
-    font-size: 5.3em;
+    font-size: 84.8px;
     color: $couleur_secondaire;
     animation: loader__apparition 3s cubic-bezier(1, 0.02, 0.11, 0.87) forwards;
   }
