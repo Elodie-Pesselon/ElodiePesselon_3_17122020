@@ -216,6 +216,10 @@ header {
   padding-bottom: 20px;
 }
 
+#header__logo {
+  opacity: 0;
+}
+
 /*______ SECTION LOCALISATION______*/
 #localisation {
   display: flex;
