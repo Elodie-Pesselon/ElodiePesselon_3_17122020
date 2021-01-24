@@ -19,6 +19,17 @@ $couleur_linear-gradient: linear-gradient(
 
 /*______ LOADER HOME PAGE ______*/
 
+/* Disposition et propriétés du loader */
+#loader {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  justify-content: center;
+}
+
+/* Animation du loader */
 @keyframes loader__apparition {
   0% {
     font-size: 36.8px;
@@ -35,50 +46,35 @@ $couleur_linear-gradient: linear-gradient(
   }
 }
 
-#loader {
-  font-family: "Shrikhand", cursive;
-  margin: 0;
-  display: flex;
-  position: absolute;
-  right: 0px;
-  left: 0px;
-  justify-content: center;
-}
-
+/* Propriétés du loader */
 .loader__lettre {
   font-size: 32px;
   color: $couleur_secondaire;
   animation: loader__apparition 3s cubic-bezier(1, 0.02, 0.11, 0.87) forwards;
 }
 
+/* Délai avant lancement d'animation pour chaque lettre */
 #loader__lettre--1 {
   animation-delay: 0s;
 }
-
 #loader__lettre--2 {
   animation-delay: 0.1s;
 }
-
 #loader__lettre--3 {
   animation-delay: 0.2s;
 }
-
 #loader__lettre--4 {
   animation-delay: 0.3s;
 }
-
 #loader__lettre--5 {
   animation-delay: 0.4s;
 }
-
 #loader__lettre--6 {
   animation-delay: 0.5s;
 }
-
 #loader__lettre--7 {
   animation-delay: 0.6s;
 }
-
 #loader__lettre--8 {
   animation-delay: 0.7s;
 }
@@ -148,6 +144,7 @@ input {
   appearance: none;
 }
 
+/* Propriétés de la page */
 body {
   margin: 0 auto;
   max-width: 767px;
@@ -228,17 +225,8 @@ p {
 
 /*______ HEADER ______*/
 
-#logo /* Positionnement du logo */ {
-  /* Img centrée horizontalement*/
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* Taille de l'image */
-  width: 50%;
-  height: 50%;
-}
-
-header /* Mise en forme du header */ {
+/* Mise en forme et propriétés du header */
+header {
   background-color: white;
   /* Ombre */
   box-shadow: 4px 4px 4px $couleur_box_shadow;
@@ -246,6 +234,7 @@ header /* Mise en forme du header */ {
   padding-bottom: 20px;
 }
 
+/* Opacité du header à 0 pour debug d'affichage sur Firefox */
 #header__logo {
   opacity: 0;
 }
@@ -253,6 +242,7 @@ header /* Mise en forme du header */ {
 /*______ SECTION LOCALISATION______*/
 
 #localisation {
+  /* Propriétés du bloc */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -261,31 +251,37 @@ header /* Mise en forme du header */ {
   padding-top: 20px;
   padding-bottom: 20px;
   & > #localisation__picto {
+    /* Propriétés du picto */
     margin-right: 12px;
     position: relative;
     top: -3px;
   }
   & > #localisation__texte {
+    /* Propriétés du texte */
     margin: 0px;
   }
 }
 
 /*______ SECTION PRESENTATION ______*/
 
-#presentation /* Layout du bloc présentation */ {
+#presentation {
+  /* Propriétés du bloc */
   background-color: $couleur_background_secondaire;
   padding-top: 20px;
   padding-bottom: 60px;
   padding-right: 5px;
   padding-left: 5px;
   text-align: center;
-  & > #presentation__h2 /* "Réservez le menu qui vous convient"*/ {
+  & > #presentation__h2 {
+    /* Propriétés h2 "Réservez le menu qui vous convient"*/
     margin-bottom: 20px;
   }
-  & > #presentation__h3 /* Découvrez des restaurant d'exception, sélectionnés par nos soins */ {
+  & > #presentation__h3 {
+    /* Propriétés h2 "Découvrez des restaurant d'exception, sélectionnés par nos soins" */
     margin-bottom: 50px;
   }
   & > #presentation__btn {
+    /* Propriété du bouton */
     padding-right: 20px;
     padding-left: 20px;
   }
@@ -294,19 +290,23 @@ header /* Mise en forme du header */ {
 /*______ SECTION FONCTIONNEMENT ______*/
 
 #fonctionnement {
+  /* Propriétés du bloc */
   background-color: white;
   padding-top: 35px;
   padding-bottom: 35px;
   & > #fonctionnement__titre {
+    /* Propriétés du titre "Fonctionnement" */
     margin-top: 20px;
     margin-left: 20px;
     margin-top: 0px;
   }
   & > #fonctionnement__tuiles {
+    /* Propriétés du bloc tuile */
     display: flex;
     flex-direction: column;
     align-items: center;
-    & > .fonctionnement__tuiles--tuile {
+    & > .fonctionnement__tuiles__tuile {
+      /* Propriétés de chaque tuile */
       display: flex;
       align-items: center;
       background-color: #f6f6f6;
@@ -319,8 +319,15 @@ header /* Mise en forme du header */ {
       margin-top: 20px;
       counter-increment: listing;
       width: 70%;
+      & > .fonctionnement__tuiles__tuile__picto {
+        position: relative;
+        left: -25px;
+        color: $couleur_box_shadow;
+        font-size: 1.2em;
+      }
     }
-    & > .fonctionnement__tuiles--tuile::before {
+    & > .fonctionnement__tuiles__tuile::before {
+      /* Pastille de numérotation */
       background-color: #9356dc;
       border-radius: 50px;
       width: 19px;
@@ -335,13 +342,6 @@ header /* Mise en forme du header */ {
   }
 }
 
-.fonctionnement__picto {
-  position: relative;
-  left: -25px;
-  color: $couleur_box_shadow;
-  font-size: 1.2em;
-}
-
 ol {
   margin: 0;
   padding: 0;
@@ -354,40 +354,42 @@ ol {
   margin-top: 20px;
 }
 
-#restaurants__bloc {
+#restaurants__tuiles {
+  /* Bloc tuiles */
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
-  & > .restaurants__tuiles {
+  & > .restaurants__tuiles__tuile {
+    /* Propriétés de chaque tuile */
     display: flex;
     flex-direction: column;
     margin: 20px;
     background: white;
     border-radius: 15px;
-    & > .restaurants__image {
+    & > .restaurants__tuiles__tuile__image {
       object-fit: cover;
       object-position: bottom;
       height: 220px;
       border-top-right-radius: 15px;
       border-top-left-radius: 15px;
     }
-    & > .restaurants__tuiles--bloc {
+    & > .restaurants__tuiles__tuile__contenu {
       display: flex;
       align-items: center;
       margin-right: 20px;
-      & > .restaurants__tuiles--texte {
+      & > .restaurants__tuiles__tuile__contenu__texte {
         flex: 1;
-        & > .restaurants__noms,
-        .restaurants__localisation {
+        & > .restaurants__tuiles__tuile__contenu__texte_noms,
+        .restaurants__tuiles__tuile__contenu__texte__localisation {
           margin-left: 15px;
         }
-        & > .restaurants__noms {
+        & > .restaurants__tuiles__tuile__contenu__texte_noms {
           font-weight: bold;
           font-size: 1.3em;
           margin: 15px 0px 10px 15px;
           display: block;
         }
-        & > .restaurants__localisation {
+        & > .restaurants__tuiles__tuile__contenu__texte__localisation {
           font-size: 1.2em;
           margin: 0px 0px 15px 15px;
           font-weight: lighter;
@@ -426,6 +428,13 @@ ol {
   align-items: center;
 }
 
+#logo {
+  /* Img centrée horizontalement*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .arrow /* Flêche de renvoi vers la Home Page */ {
   font-size: 1.8em;
   position: relative;
@@ -454,23 +463,23 @@ ol {
 
 /*______ MENU ______*/
 
-#menu /* Layout du menu */ {
+#menu { /* Layout du menu */
   padding-top: 30px;
   background-color: $couleur_background_principal;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   position: relative;
   top: -66px;
-  & > #menu__h2 /* Nom du restaurant */ {
+  & > #menu__h2 { /* Bloc : nom du restaurant + like */
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-left: 20px;
-    & > #menu__h2--shrikhand {
+    & > #menu__h2--shrikhand { /* nom du restaurant */ 
       font-family: "Shrikhand", cursive;
       font-size: 1.6em;
     }
-    & > .likemenu {
+    & > .likemenu { /* like */ 
       font-size: 1.6em;
       background: linear-gradient(
         52deg,
@@ -507,7 +516,7 @@ ol {
   & > .menu__plats {
     display: flex;
     flex-direction: column;
-    & > .plats__tuile {
+    & > .menu__plats__tuile {
       display: flex;
       background-color: $couleur_background_secondaire;
       border-radius: 15px;
@@ -519,25 +528,25 @@ ol {
       opacity: 0;
       animation: apparition-plats 1.8s forwards;
       overflow: hidden;
-      &:hover .tuile__validation {
+      &:hover .menu__plats__tuile__validation {
         width: 64.69px;
       }
-      &:hover .tuile__validation i {
+      &:hover .menu__plats__tuile__validation i {
         transform: rotate(-360deg);
       }
-      & > .tuile__texte {
+      & > .menu__plats__tuile__texte {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         padding: 15px;
         position: relative;
         flex-grow: 1;
-        & > .tuile__texte--size {
+        & > .menu__plats__tuile__texte--size {
           font-size: 1em;
           overflow: hidden;
           text-overflow: ellipsis;
         }
-        & > .tuile__texte--lighter {
+        & > .menu__plats__tuile__texte--lighter {
           font-weight: lighter;
           margin-top: 5px;
           font-size: 0.8em;
@@ -545,13 +554,13 @@ ol {
           text-overflow: ellipsis;
           padding-right: 26px;
         }
-        & > .tuile__prix {
+        & > .menu__plats__tuile__texte--prix {
           position: absolute;
           right: 8px;
           bottom: 15px;
         }
       }
-      & > .tuile__validation {
+      & > .menu__plats__tuile__validation {
         display: flex;
         justify-content: center;
         width: 0px;
@@ -562,7 +571,7 @@ ol {
         padding-top: 23px;
         padding-bottom: 23px;
       }
-      & > .tuile__validation i {
+      & > .menu__plats__tuile__validation i {
         color: white;
         transition: 1.5s;
         font-size: 1.5em;
@@ -628,7 +637,6 @@ ol {
       -webkit-transform: translateY(-144px);
     }
   }
-  
 
   .loader__lettre {
     font-size: 84.8px;
@@ -645,11 +653,11 @@ ol {
       font-size: 2em;
     }
     & > #fonctionnement__tuiles /* Modification de la taille des tuiles fonctionnement */ {
-      & > .fonctionnement__tuiles--tuile {
+      & > .fonctionnement__tuiles__tuile {
         width: 40%;
         font-size: 1.3em;
       }
-      & > .fonctionnement__tuiles--tuile::before {
+      & > .fonctionnement__tuiles__tuile::before {
         width: 24px;
       }
     }
@@ -662,13 +670,13 @@ ol {
     margin-top: 40px;
   }
 
-  #restaurants__bloc /* Modification de la mise en page des tuiles restaurants */ {
+  #restaurants__tuiles /* Modification de la mise en page des tuiles restaurants */ {
     flex-wrap: wrap;
     flex-direction: initial;
     justify-content: center;
-    & > .restaurants__tuiles {
+    & > .restaurants__tuiles__tuile {
       width: 530px;
-      & > .restaurants__image {
+      & > .restaurants__tuiles__tuile__image {
         object-position: center;
         height: 250px;
       }
@@ -694,17 +702,17 @@ ol {
     }
     & > .menu__plats {
       align-items: center;
-      & > .plats__tuile {
+      & > .menu__plats__tuile {
         width: 95%;
-        & > .tuile__texte {
-          & > .tuile__texte--size {
+        & > .menu__plats__tuile__texte {
+          & > .menu__plats__tuile__texte--size {
             font-size: 1.2em;
           }
-          & > .tuile__texte--lighter {
+          & > .menu__plats__tuile__texte--lighter {
             font-size: 1em;
           }
         }
-        & > .tuile__validation {
+        & > .menu__plats__tuile__validation {
           padding-top: 27px;
           padding-bottom: 27px;
         }

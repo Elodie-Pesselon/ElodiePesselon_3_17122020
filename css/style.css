@@ -2,6 +2,17 @@
 /*-----------------------------------------------VARIABLES----------------------------------------------------*/
 /*----------------------------------------------ANIMATIONS----------------------------------------------------*/
 /*______ LOADER HOME PAGE ______*/
+/* Disposition et propriétés du loader */
+#loader {
+  font-family: "Shrikhand", cursive;
+  display: flex;
+  position: absolute;
+  right: 0px;
+  left: 0px;
+  justify-content: center;
+}
+
+/* Animation du loader */
 @keyframes loader__apparition {
   0% {
     font-size: 36.8px;
@@ -17,22 +28,14 @@
     -webkit-transform: translateY(-67px);
   }
 }
-#loader {
-  font-family: "Shrikhand", cursive;
-  margin: 0;
-  display: flex;
-  position: absolute;
-  right: 0px;
-  left: 0px;
-  justify-content: center;
-}
-
+/* Propriétés du loader */
 .loader__lettre {
   font-size: 32px;
   color: #ff79da;
   animation: loader__apparition 3s cubic-bezier(1, 0.02, 0.11, 0.87) forwards;
 }
 
+/* Délai avant lancement d'animation pour chaque lettre */
 #loader__lettre--1 {
   animation-delay: 0s;
 }
@@ -121,6 +124,7 @@ input {
   appearance: none;
 }
 
+/* Propriétés de la page */
 body {
   margin: 0 auto;
   max-width: 767px;
@@ -197,16 +201,7 @@ p {
 
 /*------------------------------------------------HOME PAGE---------------------------------------------------*/
 /*______ HEADER ______*/
-#logo {
-  /* Img centrée horizontalement*/
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  /* Taille de l'image */
-  width: 50%;
-  height: 50%;
-}
-
+/* Mise en forme et propriétés du header */
 header {
   background-color: white;
   /* Ombre */
@@ -215,12 +210,14 @@ header {
   padding-bottom: 20px;
 }
 
+/* Opacité du header à 0 pour debug d'affichage sur Firefox */
 #header__logo {
   opacity: 0;
 }
 
 /*______ SECTION LOCALISATION______*/
 #localisation {
+  /* Propriétés du bloc */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -230,16 +227,19 @@ header {
   padding-bottom: 20px;
 }
 #localisation > #localisation__picto {
+  /* Propriétés du picto */
   margin-right: 12px;
   position: relative;
   top: -3px;
 }
 #localisation > #localisation__texte {
+  /* Propriétés du texte */
   margin: 0px;
 }
 
 /*______ SECTION PRESENTATION ______*/
 #presentation {
+  /* Propriétés du bloc */
   background-color: #f6f6f6;
   padding-top: 20px;
   padding-bottom: 60px;
@@ -248,33 +248,40 @@ header {
   text-align: center;
 }
 #presentation > #presentation__h2 {
+  /* Propriétés h2 "Réservez le menu qui vous convient"*/
   margin-bottom: 20px;
 }
 #presentation > #presentation__h3 {
+  /* Propriétés h2 "Découvrez des restaurant d'exception, sélectionnés par nos soins" */
   margin-bottom: 50px;
 }
 #presentation > #presentation__btn {
+  /* Propriété du bouton */
   padding-right: 20px;
   padding-left: 20px;
 }
 
 /*______ SECTION FONCTIONNEMENT ______*/
 #fonctionnement {
+  /* Propriétés du bloc */
   background-color: white;
   padding-top: 35px;
   padding-bottom: 35px;
 }
 #fonctionnement > #fonctionnement__titre {
+  /* Propriétés du titre "Fonctionnement" */
   margin-top: 20px;
   margin-left: 20px;
   margin-top: 0px;
 }
 #fonctionnement > #fonctionnement__tuiles {
+  /* Propriétés du bloc tuile */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-#fonctionnement > #fonctionnement__tuiles > .fonctionnement__tuiles--tuile {
+#fonctionnement > #fonctionnement__tuiles > .fonctionnement__tuiles__tuile {
+  /* Propriétés de chaque tuile */
   display: flex;
   align-items: center;
   background-color: #f6f6f6;
@@ -288,7 +295,14 @@ header {
   counter-increment: listing;
   width: 70%;
 }
-#fonctionnement > #fonctionnement__tuiles > .fonctionnement__tuiles--tuile::before {
+#fonctionnement > #fonctionnement__tuiles > .fonctionnement__tuiles__tuile > .fonctionnement__tuiles__tuile__picto {
+  position: relative;
+  left: -25px;
+  color: #9b9e9f;
+  font-size: 1.2em;
+}
+#fonctionnement > #fonctionnement__tuiles > .fonctionnement__tuiles__tuile::before {
+  /* Pastille de numérotation */
   background-color: #9356dc;
   border-radius: 50px;
   width: 19px;
@@ -299,13 +313,6 @@ header {
   position: relative;
   left: -42px;
   content: counter(listing);
-}
-
-.fonctionnement__picto {
-  position: relative;
-  left: -25px;
-  color: #9b9e9f;
-  font-size: 1.2em;
 }
 
 ol {
@@ -319,44 +326,46 @@ ol {
   margin-top: 20px;
 }
 
-#restaurants__bloc {
+#restaurants__tuiles {
+  /* Bloc tuiles */
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
 }
-#restaurants__bloc > .restaurants__tuiles {
+#restaurants__tuiles > .restaurants__tuiles__tuile {
+  /* Propriétés de chaque tuile */
   display: flex;
   flex-direction: column;
   margin: 20px;
   background: white;
   border-radius: 15px;
 }
-#restaurants__bloc > .restaurants__tuiles > .restaurants__image {
+#restaurants__tuiles > .restaurants__tuiles__tuile > .restaurants__tuiles__tuile__image {
   object-fit: cover;
   object-position: bottom;
   height: 220px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
-#restaurants__bloc > .restaurants__tuiles > .restaurants__tuiles--bloc {
+#restaurants__tuiles > .restaurants__tuiles__tuile > .restaurants__tuiles__tuile__contenu {
   display: flex;
   align-items: center;
   margin-right: 20px;
 }
-#restaurants__bloc > .restaurants__tuiles > .restaurants__tuiles--bloc > .restaurants__tuiles--texte {
+#restaurants__tuiles > .restaurants__tuiles__tuile > .restaurants__tuiles__tuile__contenu > .restaurants__tuiles__tuile__contenu__texte {
   flex: 1;
 }
-#restaurants__bloc > .restaurants__tuiles > .restaurants__tuiles--bloc > .restaurants__tuiles--texte > .restaurants__noms,
-#restaurants__bloc > .restaurants__tuiles > .restaurants__tuiles--bloc > .restaurants__tuiles--texte .restaurants__localisation {
+#restaurants__tuiles > .restaurants__tuiles__tuile > .restaurants__tuiles__tuile__contenu > .restaurants__tuiles__tuile__contenu__texte > .restaurants__tuiles__tuile__contenu__texte_noms,
+#restaurants__tuiles > .restaurants__tuiles__tuile > .restaurants__tuiles__tuile__contenu > .restaurants__tuiles__tuile__contenu__texte .restaurants__tuiles__tuile__contenu__texte__localisation {
   margin-left: 15px;
 }
-#restaurants__bloc > .restaurants__tuiles > .restaurants__tuiles--bloc > .restaurants__tuiles--texte > .restaurants__noms {
+#restaurants__tuiles > .restaurants__tuiles__tuile > .restaurants__tuiles__tuile__contenu > .restaurants__tuiles__tuile__contenu__texte > .restaurants__tuiles__tuile__contenu__texte_noms {
   font-weight: bold;
   font-size: 1.3em;
   margin: 15px 0px 10px 15px;
   display: block;
 }
-#restaurants__bloc > .restaurants__tuiles > .restaurants__tuiles--bloc > .restaurants__tuiles--texte > .restaurants__localisation {
+#restaurants__tuiles > .restaurants__tuiles__tuile > .restaurants__tuiles__tuile__contenu > .restaurants__tuiles__tuile__contenu__texte > .restaurants__tuiles__tuile__contenu__texte__localisation {
   font-size: 1.2em;
   margin: 0px 0px 15px 15px;
   font-weight: lighter;
@@ -381,6 +390,13 @@ ol {
 #header {
   display: flex;
   align-items: center;
+}
+
+#logo {
+  /* Img centrée horizontalement*/
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .arrow {
@@ -410,6 +426,7 @@ ol {
 
 /*______ MENU ______*/
 #menu {
+  /* Layout du menu */
   padding-top: 30px;
   background-color: #eaeaea;
   border-top-right-radius: 40px;
@@ -418,16 +435,19 @@ ol {
   top: -66px;
 }
 #menu > #menu__h2 {
+  /* Bloc : nom du restaurant + like */
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-left: 20px;
 }
 #menu > #menu__h2 > #menu__h2--shrikhand {
+  /* nom du restaurant */
   font-family: "Shrikhand", cursive;
   font-size: 1.6em;
 }
 #menu > #menu__h2 > .likemenu {
+  /* like */
   font-size: 1.6em;
   background: linear-gradient(52deg, #ff79da 5%, #9356dc 40%, #eaeaea 50%, #eaeaea 100%);
   background-size: 300%;
@@ -458,7 +478,7 @@ ol {
   display: flex;
   flex-direction: column;
 }
-#menu > .menu__plats > .plats__tuile {
+#menu > .menu__plats > .menu__plats__tuile {
   display: flex;
   background-color: #f6f6f6;
   border-radius: 15px;
@@ -471,13 +491,13 @@ ol {
   animation: apparition-plats 1.8s forwards;
   overflow: hidden;
 }
-#menu > .menu__plats > .plats__tuile:hover .tuile__validation {
+#menu > .menu__plats > .menu__plats__tuile:hover .menu__plats__tuile__validation {
   width: 64.69px;
 }
-#menu > .menu__plats > .plats__tuile:hover .tuile__validation i {
+#menu > .menu__plats > .menu__plats__tuile:hover .menu__plats__tuile__validation i {
   transform: rotate(-360deg);
 }
-#menu > .menu__plats > .plats__tuile > .tuile__texte {
+#menu > .menu__plats > .menu__plats__tuile > .menu__plats__tuile__texte {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -485,12 +505,12 @@ ol {
   position: relative;
   flex-grow: 1;
 }
-#menu > .menu__plats > .plats__tuile > .tuile__texte > .tuile__texte--size {
+#menu > .menu__plats > .menu__plats__tuile > .menu__plats__tuile__texte > .menu__plats__tuile__texte--size {
   font-size: 1em;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-#menu > .menu__plats > .plats__tuile > .tuile__texte > .tuile__texte--lighter {
+#menu > .menu__plats > .menu__plats__tuile > .menu__plats__tuile__texte > .menu__plats__tuile__texte--lighter {
   font-weight: lighter;
   margin-top: 5px;
   font-size: 0.8em;
@@ -498,12 +518,12 @@ ol {
   text-overflow: ellipsis;
   padding-right: 26px;
 }
-#menu > .menu__plats > .plats__tuile > .tuile__texte > .tuile__prix {
+#menu > .menu__plats > .menu__plats__tuile > .menu__plats__tuile__texte > .menu__plats__tuile__texte--prix {
   position: absolute;
   right: 8px;
   bottom: 15px;
 }
-#menu > .menu__plats > .plats__tuile > .tuile__validation {
+#menu > .menu__plats > .menu__plats__tuile > .menu__plats__tuile__validation {
   display: flex;
   justify-content: center;
   width: 0px;
@@ -514,7 +534,7 @@ ol {
   padding-top: 23px;
   padding-bottom: 23px;
 }
-#menu > .menu__plats > .plats__tuile > .tuile__validation i {
+#menu > .menu__plats > .menu__plats__tuile > .menu__plats__tuile__validation i {
   color: white;
   transition: 1.5s;
   font-size: 1.5em;
@@ -588,11 +608,11 @@ ol {
     margin-left: 90px;
     font-size: 2em;
   }
-  #fonctionnement > #fonctionnement__tuiles > .fonctionnement__tuiles--tuile {
+  #fonctionnement > #fonctionnement__tuiles > .fonctionnement__tuiles__tuile {
     width: 40%;
     font-size: 1.3em;
   }
-  #fonctionnement > #fonctionnement__tuiles > .fonctionnement__tuiles--tuile::before {
+  #fonctionnement > #fonctionnement__tuiles > .fonctionnement__tuiles__tuile::before {
     width: 24px;
   }
 
@@ -603,15 +623,15 @@ ol {
     margin-top: 40px;
   }
 
-  #restaurants__bloc {
+  #restaurants__tuiles {
     flex-wrap: wrap;
     flex-direction: initial;
     justify-content: center;
   }
-  #restaurants__bloc > .restaurants__tuiles {
+  #restaurants__tuiles > .restaurants__tuiles__tuile {
     width: 530px;
   }
-  #restaurants__bloc > .restaurants__tuiles > .restaurants__image {
+  #restaurants__tuiles > .restaurants__tuiles__tuile > .restaurants__tuiles__tuile__image {
     object-position: center;
     height: 250px;
   }
@@ -634,16 +654,16 @@ ol {
   #menu > .menu__plats {
     align-items: center;
   }
-  #menu > .menu__plats > .plats__tuile {
+  #menu > .menu__plats > .menu__plats__tuile {
     width: 95%;
   }
-  #menu > .menu__plats > .plats__tuile > .tuile__texte > .tuile__texte--size {
+  #menu > .menu__plats > .menu__plats__tuile > .menu__plats__tuile__texte > .menu__plats__tuile__texte--size {
     font-size: 1.2em;
   }
-  #menu > .menu__plats > .plats__tuile > .tuile__texte > .tuile__texte--lighter {
+  #menu > .menu__plats > .menu__plats__tuile > .menu__plats__tuile__texte > .menu__plats__tuile__texte--lighter {
     font-size: 1em;
   }
-  #menu > .menu__plats > .plats__tuile > .tuile__validation {
+  #menu > .menu__plats > .menu__plats__tuile > .menu__plats__tuile__validation {
     padding-top: 27px;
     padding-bottom: 27px;
   }
