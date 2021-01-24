@@ -136,6 +136,26 @@ footer {
   }
 }
 
+.like {
+  font-size: 2.2em;
+  background: linear-gradient(
+    52deg,
+    $couleur_secondaire 5%,
+    $couleur_primaire 40%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background-size: 300%;
+  background-position: 100% 0%;
+  filter: drop-shadow(0px 0px 1px black);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 1s ease-in-out;
+  &:hover {
+    background-position: 0% 100%;
+  }
+}
+
 /*--------------------------------------------------BASE------------------------------------------------------*/
 
 input {
@@ -399,26 +419,6 @@ ol {
   }
 }
 
-.like {
-  font-size: 2.2em;
-  background: linear-gradient(
-    52deg,
-    $couleur_secondaire 5%,
-    $couleur_primaire 40%,
-    rgba(255, 255, 255, 1) 50%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  background-size: 300%;
-  background-position: 100% 0%;
-  filter: drop-shadow(0px 0px 1px black);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: all 1s ease-in-out;
-  &:hover {
-    background-position: 0% 100%;
-  }
-}
-
 /*--------------------------------------------- PAGES RESTAURANTS ---------------------------------------------*/
 
 /*______ HEADER ______*/
@@ -463,23 +463,27 @@ ol {
 
 /*______ MENU ______*/
 
-#menu { /* Layout du menu */
+#menu {
+  /* Layout du menu */
   padding-top: 30px;
   background-color: $couleur_background_principal;
   border-top-right-radius: 40px;
   border-top-left-radius: 40px;
   position: relative;
   top: -66px;
-  & > #menu__h2 { /* Bloc : nom du restaurant + like */
+  & > #menu__h2 {
+    /* Bloc : nom du restaurant + like */
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin-left: 20px;
-    & > #menu__h2--shrikhand { /* nom du restaurant */ 
+    & > #menu__h2--shrikhand {
+      /* nom du restaurant */
       font-family: "Shrikhand", cursive;
       font-size: 1.6em;
     }
-    & > .likemenu { /* like */ 
+    & > .likemenu {
+      /* like */
       font-size: 1.6em;
       background: linear-gradient(
         52deg,
