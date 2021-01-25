@@ -574,6 +574,7 @@ ol {
         background-color: $couleur_tertiaire;
         padding-top: 23px;
         padding-bottom: 23px;
+        box-sizing: border-box;
       }
       & > .menu__plats__tuile__validation i {
         color: white;

@@ -533,6 +533,7 @@ ol {
   background-color: #99e2d0;
   padding-top: 23px;
   padding-bottom: 23px;
+  box-sizing: border-box;
 }
 #menu > .menu__plats > .menu__plats__tuile > .menu__plats__tuile__validation i {
   color: white;
